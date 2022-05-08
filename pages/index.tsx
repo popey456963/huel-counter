@@ -114,7 +114,7 @@ const Home: NextPage = () => {
     }
   ], [])
 
-  const updateMyData = (rowIndex, columnId, value) => {
+  const updateMyData = (rowIndex: number, columnId: 'name' | 'value' | 'count', value: any) => {
     setItems(old =>
       old.map((row, index) => {
         if (index === rowIndex) {
@@ -128,7 +128,7 @@ const Home: NextPage = () => {
     )
   }
 
-  const tableInstance = useTable({ columns, data: items, defaultColumn, updateMyData })
+  const tableInstance = useTable({ columns: columns, data: items, defaultColumn, updateMyData: updateMyData } as any)
   const {
     getTableProps,
     getTableBodyProps,
@@ -150,16 +150,16 @@ const Home: NextPage = () => {
           Huel Calculator
         </h1>
 
-        <p>Calculate how many orders you've purchased through Huel. To use:</p>
+        <p>Calculate how many orders you&apos;ve purchased through Huel. To use:</p>
         <ol>
           <li>Go to your order history (e.g. <a href="https://uk.huel.com/account#/history">https://uk.huel.com/account#/history</a>)</li>
           <li>Open your developer console (instructions <a href="https://support.airtable.com/hc/en-us/articles/232313848-How-to-open-the-developer-console">https://support.airtable.com/hc/en-us/articles/232313848-How-to-open-the-developer-console</a>)</li>
-          <li>Copy the 'orders' response from the 'Network' tab and copy it into the box below.</li>
+          <li>Copy the &apos;orders&apos; response from the &apos;Network&apos; tab and copy it into the box below.</li>
         
 
-        <Image src="/example.png" width={885} height={512} />
+        <Image src="/example.png" alt="example flow" width={885} height={512} />
 
-          <li>Paste it down below, it should start like &#123;"success": true, "orders: [...]"&#125;</li>
+          <li>Paste it down below, it should start like &#123;&quot;success&quot;: true, &quot;orders: [...]&quot;&#125;</li>
 
         </ol>
 
