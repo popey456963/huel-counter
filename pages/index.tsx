@@ -62,7 +62,7 @@ const Home: NextPage = () => {
           .replace(/ \(Subscription\)/g, '')
           .replace(/ v\d\.\d/g, '')
 
-        const excludes = ['Shaker Bottle', 'T-Shirt', 'Flavour Boost', 'Huel Shaker', 'Literature', 'Scoop', 'Huel Handbook']
+        const excludes = ['Shaker Bottle', 'T-Shirt', 'Flavour Boost', 'Huel Shaker', 'Literature', 'Leaflet', 'Scoop', 'Huel Handbook', 'Shaker v2', 'Tote Bag', 'Stainless Steel Bottle']
 
         if (excludes.some((exclude) => name.includes(exclude))) {
           continue
@@ -96,7 +96,7 @@ const Home: NextPage = () => {
         else if (item.includes('Tomato & Herb')) value = 7
         else if (item.includes('Madras')) value = 7
         else if (item.includes('Sweet & Sour')) value = 7
-        else if (item.includes(' Leaflet')) value = 0
+        else if (item.includes('Single Huel')) value = 1
         else value = 17
 
         return {
