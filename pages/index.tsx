@@ -83,6 +83,8 @@ const Home: NextPage = () => {
         else if (item.includes('Powder')) value = 17
         else if (item.includes('Granola')) value = 7
         else if (item.includes('Black Edition')) value = 17
+        else if (item.includes(' Pot')) value = 0
+        else if (item.includes('Huel Bar')) value = 15
         else value = 17
 
         return {
