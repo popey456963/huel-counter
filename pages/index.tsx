@@ -85,6 +85,18 @@ const Home: NextPage = () => {
         else if (item.includes('Black Edition')) value = 17
         else if (item.includes(' Pot')) value = 0
         else if (item.includes('Huel Bar')) value = 15
+        else if (item.includes('Thai Green Curry')) value = 7
+        else if (item.includes('Cajun Pasta')) value = 7
+        else if (item.includes('Chick\'n & Mushroom Pasta')) value = 7
+        else if (item.includes('Thai Green Curry')) value = 7
+        else if (item.includes('Pasta Bolognese')) value = 7
+        else if (item.includes('Mac & Cheeze')) value = 7
+        else if (item.includes('Mexican Chili')) value = 7
+        else if (item.includes('Korma')) value = 7
+        else if (item.includes('Tomato & Herb')) value = 7
+        else if (item.includes('Madras')) value = 7
+        else if (item.includes('Sweet & Sour')) value = 7
+        else if (item.includes(' Leaflet')) value = 0
         else value = 17
 
         return {
